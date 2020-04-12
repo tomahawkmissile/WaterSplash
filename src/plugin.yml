@@ -1,0 +1,23 @@
+main: com.gmail.tomahawkmissile2.WaterSplash.Main
+author: Tomahawkmissile
+name: WaterSplash
+version: 1.0
+description: Takes away fire
+api-version: 1.15
+commands:
+  splash:
+    description: Take away your fire
+    usage: /splash <player>
+permissions:
+  splash.*:
+    description: Use all commands.
+    default: op
+    children:
+      splash.self: true
+      splash.others: true
+  splash.self:
+    description: Remove your fire.
+    default: true
+  splash.others:
+    description: Remove fire from other players.
+    default: op
